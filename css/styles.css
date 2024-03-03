@@ -1,0 +1,498 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: top;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+/* Fonts */
+
+@font-face {
+    font-family: 'Kode Mono';
+    src: url('../fonts/kode-mono/KodeMono-Medium.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/roboto/Roboto-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kode Mono';
+    src: url('../fonts/kode-mono/KodeMono-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('../fonts/space-grotesk/SpaceGrotesk-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/roboto/Roboto-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('../fonts/space-grotesk/SpaceGrotesk-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kode Mono';
+    src: url('../fonts/kode-mono/KodeMono-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kode Mono';
+    src: url('../fonts/kode-mono/KodeMono-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/roboto/Roboto-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/roboto/Roboto-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/roboto/Roboto-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('../fonts/space-grotesk/SpaceGrotesk-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('../fonts/space-grotesk/SpaceGrotesk-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+/*  Styles  */
+
+.container {
+    max-width:  1200px;
+    margin: 0 auto;
+}
+
+.header-menu {
+    background: #000;
+    padding: 20px 0;
+}
+
+.header-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-family: 'Kode Mono';
+    font-weight: 600;
+}
+
+
+.header-list a {
+    display: block;
+    padding: 12px 20px 12px 35px;
+    background: palevioletred;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: aliceblue;
+    white-space: nowrap;
+}
+
+.header-list li {
+    position: relative;
+}
+
+.header-list li:hover .header-second-list {
+    font-family: 'Space Grotesk';
+    display: block;
+}
+
+.home {
+    position: relative;
+}
+
+.home::before {
+    content: " ";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 5px;
+    left: 2px;
+    background:    url(../img/home.svg) no-repeat 50% / 30px;
+}
+.chill {
+    position: relative;
+}
+.chill::before {
+    content: " ";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 5px;
+    left: 2px;
+    background:    url(../img/chill.svg) no-repeat 50% / 30px;
+}
+
+.homeworks a {
+    position: relative;
+    padding: 12px 35px 12px 20px;
+}
+
+.homeworks::after {
+    content: " ";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 5px;
+    right: 2px;
+    background:    url(../img/arrow-down.svg) no-repeat 50% / 30px;
+}
+
+.gallery {
+    position: relative;
+}
+.gallery::before {
+    content: " ";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 5px;
+    left: 2px;
+    background:    url(../img/gallery.svg) no-repeat 50% / 30px;
+}
+
+.header-second-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    padding: 20px 0 0;
+}
+
+.header-second-list a {
+    padding: 12px 20px 12px 35px;
+}
+
+
+.header-second-list a {
+    background: rgb(170, 65, 100);
+}
+
+.flex-block-parent {
+    position: relative;
+}
+
+.flex-block-parent > a::before {
+    content: " ";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 5px;
+    left: 2px;
+    background: url(../img/down-left.svg) no-repeat 50% / 30px;
+}
+
+.flex-block-child {
+    position: absolute;
+    top: 0;
+    right: 100%;
+    display: none;
+    font-family: 'Roboto';
+}
+
+.flex-block-child a {
+    background: rgb(138, 33, 68);
+}
+
+.flex-block-parent:hover .flex-block-child {
+    display: block;
+}
+
+.footer {
+    color: aliceblue;
+    background: #000000;
+    padding: 20px 0;
+}
+
+.footer-list {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    font-family: 'Kode Mono';
+    font-weight: 600;
+}
+
+.footer-list li{
+    position: relative;
+}
+.facebook {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: -15px;
+    left: -15px;
+    background: url(../img/facebook.svg) no-repeat 50% / 30px;
+}
+.instagram {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: -15px;
+    left: -15px;
+    background: url(../img/instagram.svg) no-repeat 50% / 30px;
+}
+.youtube {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: -15px;
+    left: -15px;
+    background: url(../img/youtube.svg) no-repeat 50% / 30px;
+}
+.twitch {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: -15px;
+    left: -15px;
+    background: url(../img/twitch.svg) no-repeat 50% / 30px;
+}
+
+/*--------Blocks---------*/ 
+
+.flex {
+	display: flex;
+}
+.flex-dir-col {
+    flex-direction: column;
+}
+.i-block {
+	display: inline-block;
+}
+.float {
+	float: left;
+    
+}
+.clearfix::after {
+    content: ' ';
+    clear: both;
+    display: block;
+}
+.fz-0 {
+	font-size: 0;
+}
+.fz-20 {
+	font-size: 20px;
+}
+.w-400 {
+	width: 400px;
+}
+.w-800 {
+	width: 800px;
+}
+.h-100 {
+	height: 100px;
+}
+.h-133 {
+	height: 133.33px;
+}
+.h-200 {
+	height: 200px;
+}
+.h-400 {
+	height: 400px;
+}
+
+.outline {
+	outline: 2px solid red;
+}
+.bg-blue {
+	background: rgb(117, 227, 255);
+}
+.bg-violet {
+	background: violet;
+}
+.bg-green {
+    background: greenyellow;
+}
+
+
+.secret-message {
+    margin: 150px 0 0;
+}
+/* table */
+
+.page-table{
+background: #FFFFFF;
+}
+
+
+
+table {
+    margin: 0 auto;
+}
+
+.table-flip {
+    margin-top: 50px;
+}
+
+.main-table{
+    margin: 20px 0 0;
+    width: 100%;
+    border-style: hidden;
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px #E4E4EF;
+}
+
+.main-table th,
+.main-table td {
+    border-top: 1px solid #E4E4EF;
+}
+
+.main-table th {
+    padding: 18px 16px;
+    text-align: left;
+    font-weight: 700;
+}
+
+.center-txt {
+    text-align: center;
+}
+
+.main-table td {
+    padding: 8px 16px;
+    vertical-align: middle;
+}
+
+.main-table td p + p {
+    font-size: 12px;
+    line-height: 20px;
+    color: #808080;
+}
+
+.user, .email {
+    width: 400px;
+}
+
+.phone {
+    width: 158px;
+}
+
+.btn {
+    color: #bdbcdb;
+    background: #f8f9fb;
+    font-size: 12px;
+    padding: 8px 24px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.btn.primary {
+    color: #605dec;
+    background: #ededfe;
+}
+
+.btn.success {
+    color: #31aa27;
+    background: #ebf6eb;
+}
+
+.btn.warning {
+    color: #e99518;
+    background: #fff4e4;
+}
+
+.btn.error {
+    color: #f93232;
+    background: #fff0f0;
+}
